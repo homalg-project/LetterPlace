@@ -43,6 +43,3 @@ DeclareAttribute( "IndeterminatesOfLetterPlaceRing",
 
 DeclareOperation( "LetterPlaceRing",
         [ IsHomalgRing, IsInt ] );
-
-DeclareOperation( "Indeterminates",
-        [ IsHomalgRing ] );
