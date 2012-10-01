@@ -11,15 +11,15 @@ LoadPackage( "Modules" );
 
 SetGapDocLaTeXOptions( "utf8" );
 
-bib := ParseBibFiles( "doc/homalg.bib" );
-WriteBibXMLextFile( "doc/homalgBib.xml", bib );
+bib := ParseBibFiles( "doc/LetterPlace.bib" );
+WriteBibXMLextFile( "doc/LetterPlaceBib.xml", bib );
 
 Read( "ListOfDocFiles.g" );
 
-PrintTo( "VERSION", PackageInfo( "homalg" )[1].Version );
+PrintTo( "VERSION", PackageInfo( "LetterPlace" )[1].Version );
 
-MakeGAPDocDoc( "doc", "homalg", list, "homalg" );
+MakeGAPDocDoc( "doc", "LetterPlace", list, "LetterPlace" );
 
-GAPDocManualLab( "homalg" );
+GAPDocManualLab( "LetterPlace" );
 
-quit;
+QUIT;
