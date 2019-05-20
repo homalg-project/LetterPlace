@@ -129,32 +129,33 @@ Persons := [
     FirstNames    := "Mohamed",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "barakat@mathematik.uni-kl.de",
-    WWWHome       := "http://www.mathematik.uni-kl.de/~barakat/",
-    PostalAddress := Concatenation( [
-                       "Department of Mathematics\n",
-                       "University of Kaiserslautern\n",
-                       "67653 Kaiserslautern\n",
-                       "Germany" ] ),
-    Place         := "Kaiserslautern",
-    Institution   := "University of Kaiserslautern"
+    Email         := "mohamed.barakat@uni-siegen.de",
+    WWWHome       := "https://mohamed-barakat.github.io",
+    PostalAddress := Concatenation(
+                       "Department Mathematik\n",
+                       "Universität Siegen\n",
+                       "Walter-Flex-Straße 3\n",
+                       "57072 Siegen\n",
+                       "Germany" ),
+    Place         := "Siegen",
+    Institution   := "Universität Siegen",
   ),
   rec(
     LastName      := "Horn",
     FirstNames    := "Max",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "mhorn@tu-bs.de",
-    WWWHome       := "http://www.icm.tu-bs.de/~mhorn/",
-    PostalAddress := Concatenation( [
-                       "Department of Mathematics\n",
-                       "University of Braunschweig\n",
-                       "38106 Braunschweig\n",
-                       "Germany" ] ),
-    Place         := "Braunschweig",
-    Institution   := "University of Braunschweig"
+    Email         := "max.horn@uni-siegen.de",
+    WWWHome       := "https://www.quendi.de/math",
+    PostalAddress := Concatenation(
+                       "Department Mathematik\n",
+                       "Universität Siegen\n",
+                       "Walter-Flex-Straße 3\n",
+                       "57072 Siegen\n",
+                       "Germany" ),
+    Place         := "Siegen",
+    Institution   := "Universität Siegen",
   ),
-# provide such a record for each author and/or maintainer ...
   
 ],
 
