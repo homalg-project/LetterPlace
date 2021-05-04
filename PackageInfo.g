@@ -6,15 +6,6 @@
 ##  (created from Frank Lübeck's PackageInfo.g template file)
 ##  
 
-##  For the LoadPackage mechanism in GAP >= 4.4 only the entries
-##  .PackageName, .Version, .PackageDoc, .Dependencies, .AvailabilityTest
-##  .Autoload   are needed. The other entries are relevant if the
-##  package shall be distributed for other GAP users, in particular if it
-##  shall be redistributed via the GAP Website.
-
-##  With a new release of the package at least the entries .Version, .Date and
-##  .ArchiveURL must be updated.
-
 SetPackageInfo( rec(
 
 ##  This is case sensitive, use your preferred spelling.
@@ -145,16 +136,16 @@ Persons := [
     FirstNames    := "Max",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "max.horn@uni-siegen.de",
+    Email         := "horn@mathematik.uni-kl.de",
     WWWHome       := "https://www.quendi.de/math",
     PostalAddress := Concatenation(
-                       "Department Mathematik\n",
-                       "Universität Siegen\n",
-                       "Walter-Flex-Straße 3\n",
-                       "57072 Siegen\n",
+                       "Fachbereich Mathematik\n",
+                       "TU Kaiserslautern\n",
+                       "Gottlieb-Daimler-Straße 48\n",
+                       "67663 Kaiserslautern\n",
                        "Germany" ),
-    Place         := "Siegen",
-    Institution   := "Universität Siegen",
+    Place         := "Kaiserslautern, Germany",
+    Institution   := "TU Kaiserslautern"
   ),
   
 ],
@@ -221,8 +212,6 @@ AbstractHTML :=
 ##       - the name of the book (.BookName)
 ##       - a long title, shown by ?books (.LongTitle, optional)
 ##       - the path to the manual.six file for this book (.SixFile)
-##       - a decision if the book should be (auto)loaded, probably 'true'
-##         (.Autoload)
 ##  
 ##  For an online version on a Web page further entries are needed, 
 ##  if possible, provide an HTML- and a PDF-version:
@@ -255,9 +244,6 @@ PackageDoc := rec(
   # fit on a single text line (appears with the '?books' command in GAP)
   # LongTitle := "Elementary Divisors of Integer Matrices",
   LongTitle := "Dictionaries of External Rings for the GAP Package homalg",
-  # Should this help book be autoloaded when GAP starts up? This should
-  # usually be 'true', otherwise say 'false'. 
-  Autoload  := false
 ),
 
 
@@ -285,39 +271,7 @@ Dependencies := rec(
                       
 ),
 
-##  Provide a test function for the availability of this package.
-##  For packages which will not fully work, use 'Info(InfoWarning, 1,
-##  ".....")' statements. For packages containing nothing but GAP code,
-##  just say 'ReturnTrue' here.
-##  With the new package loading mechanism (GAP >=4.4)  the availability
-##  tests of other packages, as given under .Dependencies above, will be 
-##  done automatically and need not be included in this function.
-#AvailabilityTest := ReturnTrue,
-AvailabilityTest := function()
-    return true;
-  end,
-
-##  The LoadPackage mechanism can produce a default banner from the info
-##  in this file. If you are not happy with it, you can provide a string
-##  here that is used as a banner. GAP decides when the banner is shown and
-##  when it is not shown. *optional* (note the ~-syntax in this example)
-#BannerString := Concatenation( 
-#  "----------------------------------------------------------------\n",
-#  "Loading  LetterPlace ", ~.Version, "\n",
-#  "by ", ~.Persons[1].FirstNames, " ", ~.Persons[1].LastName,
-#        " (", ~.Persons[1].WWWHome, ")\n",
-#  "   ", ~.Persons[2].FirstNames, " ", ~.Persons[2].LastName,
-#        " (", ~.Persons[2].WWWHome, ")\n",
-#  "   ", ~.Persons[3].FirstNames, " ", ~.Persons[3].LastName,
-#        " (", ~.Persons[3].WWWHome, ")\n",
-#  "For help, type: ?LetterPlace package \n",
-#  "----------------------------------------------------------------\n" ),
-
-##  Suggest here if the package should be *automatically loaded* when GAP is 
-##  started.  This should usually be 'false'. Say 'true' only if your package 
-##  provides some improvements of the GAP library which are likely to enhance 
-##  the overall system performance for many users.
-Autoload := false,
+AvailabilityTest := ReturnTrue,
 
 ##  *Optional*, but recommended: path relative to package root to a file which 
 ##  contains as many tests of the package functionality as sensible.
@@ -328,5 +282,3 @@ TestFile := "examples/RingConstructionsSingular.g.g",
 Keywords := [ "letter place" ]
 
 ));
-
-
